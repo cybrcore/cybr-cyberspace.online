@@ -1,32 +1,35 @@
-![stylus banner](../assets/stylus.png)
+![cyberspace banner](./assets/cyberspace.jpg)
 
-# Stylus themes
-Custom themes for singular webpages for the Stylus extension inspired by cyberpunk aesthetics.
+Cyberpunk theme for Cyberspace.online
 
-> [!CAUTION]
-> This only works if you have **enabled transparency** in Firefox browser and use **Hyprland**
->
-> You also need to have [GeistMono Nerd Font](https://www.nerdfonts.com/font-downloads) installed.
+# Showcase
+## Pages
+![cyberspace all](./assets/cybrspace-all.jpg)
 
-## Result
-<img src="../assets/inspiration/insp-cyberspace.png" width="800"/></td>
+## Color options
+![cyberspace themes](./assets/cybrspace-themes-all.jpg)
 
-## What to do
-### 1. Download and install [Stylus](https://github.com/openstyles/stylus)
-### 2. Open links to the themes and click Install
-#### Themes:
-- [Cybrspace.online](https://userstyles.world/style/25121/cyberspace-online)
+# Options
+- Change colors (primary, secondary, tertiary, link, hover)
+- Change background image (12 + transparent)
+- Change layouts (navigation, chat sidebar)
+- Change font family
+- Change font size
 
-## Status
-### Done
-- [x] Cyberspace.online
+# Support
+- Desktop Firefox
+- Android Firefox
+- Resolutions from 640x480 to 4k
+- Looks nice on CRTs
 
-### WIP (not included)
-- [ ] YouTube
-- [ ] Reddit
-- [ ] Gmail
-- [ ] ChatGPT
-- [ ] GoogleDrive
-- [ ] Anilist
-- [ ] Mastodon
-- [ ] Threads
+# Steps
+## 0. Before you start
+- Download and install [Stylus](https://github.com/openstyles/stylus)
+
+## 1. Install [theme](https://userstyles.world/style/25121/cyberspace-online)
+
+## 2. Use
+- You can either use the theme as is or you can change it:  
+    1. Click on the Stylus icon in your browser toolbar  
+    2. Click on the cogwheel next to the name of the theme  
+    3. Pick your preferred options from dropdowns
