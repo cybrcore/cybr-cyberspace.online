@@ -8,6 +8,7 @@ Cyberpunk theme for Cyberspace.online
 
 ## Color options
 ![cyberspace themes](./assets/cybrspace-themes-all.jpg)
+... and 99,994 other possible combinations!
 
 # Options
 - Change colors (primary, secondary, tertiary, link, hover)
