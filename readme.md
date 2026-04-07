@@ -1,14 +1,4 @@
-![cyberspace banner](./assets/cyberspace.jpg)
-
-Cyberpunk theme for Cyberspace.online
-
-# Showcase
-## Pages
-![cyberspace all](./assets/cybrspace-all.jpg)
-
-## Color options
-![cyberspace themes](./assets/cybrspace-themes-all.jpg)
-... and 99,994 other possible combinations!
+<img src="https://raw.githubusercontent.com/cybrcore/cybrcore/refs/heads/main/assets/repo-banners/cybr-cyberspace-banner.png" height=200px/>
 
 # Options
 - Change colors (primary, secondary, tertiary, link, hover)
@@ -23,11 +13,27 @@ Cyberpunk theme for Cyberspace.online
 - Resolutions from 640x480 to 4k
 - Looks nice on CRTs
 
+# Showcase
+<img src="https://raw.githubusercontent.com/cybrcore/cybrcore/refs/heads/main/assets/showcase/cybr-cyberspace2.jpg"/>
+<p align="center">
+  <em>color combinations ↗</em>
+</p>
+<br>
+<img src="https://raw.githubusercontent.com/cybrcore/cybrcore/refs/heads/main/assets/showcase/cybr-cyberspace-all.jpg"/>
+<p align="center">
+  <em>all pages ↗</em>
+</p>
+<br>
+<img src="https://raw.githubusercontent.com/cybrcore/cybrcore/refs/heads/main/assets/showcase/cybr-cyberspace-themes-all.jpg"/>
+<p align="center">
+  <em>... and 99,994 other possible combinations! ↗</em>
+</p>
+
 # Steps
 ## 0. Before you start
 - Download and install [Stylus](https://github.com/openstyles/stylus)
 
-## 1. Install [theme](https://userstyles.world/style/25121/cyberspace-online)
+## 1. Install [cybrcore theme](https://userstyles.world/style/25121/cyberspace-online)
 
 ## 2. Use
 - You can either use the theme as is or you can change it:  
