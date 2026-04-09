@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           CYBRCORE
 @namespace      github.com/cybrcore/cybr-cyberspace.online/theme.css
-@version        3.0.0
+@version        3.1.1
 @description    Theme for Cyberspace.online
 @author         scherrer-txt
 @preprocessor   stylus
@@ -137,7 +137,7 @@
 		if fontFamily == "theme" {
 			--theme-font-mono: "GeistMonoNerdFontMono" !important;
 			
-			.font-mono, input, select, textarea, button, code, p, h1 {
+			.font-mono, input, select, textarea, button, code, p, h1, html, span {
 				font-family: GeistMonoNerdFontMono !important;
 			}
 		}
@@ -149,51 +149,51 @@
 	/* BACKGROUND */
 
 		if backgroundImage == "samurai" {
-			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybr-stylus/refs/heads/main/samurai-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybr-stylus/samurai-2560x1440.webp");
+			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybrpapers/refs/heads/main/web/samurai-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybrpapers/web/samurai-2560x1440.webp");
 			--image-color: #000 !important;
 		}
 		if backgroundImage == "shinjuku" {
-			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybr-stylus/refs/heads/main/shinjuku-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybr-stylus/shinjuku-2560x1440.webp");
+			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybrpapers/refs/heads/main/web/shinjuku-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybrpapers/web/shinjuku-2560x1440.webp");
 			--image-color: #000 !important;
 		}
 		if backgroundImage == "chiyoda" {
-			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybr-stylus/refs/heads/main/chiyoda-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybr-stylus/chiyoda-2560x1440.webp");
+			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybrpapers/refs/heads/main/web/chiyoda-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybrpapers/web/chiyoda-2560x1440.webp");
 			--image-color: #000 !important;
 		}
 		if backgroundImage == "ikebukuro" {
-			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybr-stylus/refs/heads/main/ikebukuro-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybr-stylus/ikebukuro-2560x1440.webp");
+			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybrpapers/refs/heads/main/web/ikebukuro-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybrpapers/web/ikebukuro-2560x1440.webp");
 			--image-color: #000 !important;
 		}
 		if backgroundImage == "minato" {
-			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybr-stylus/refs/heads/main/minato-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybr-stylus/minato-2560x1440.webp");
+			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybrpapers/refs/heads/main/web/minato-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybrpapers/minato-2560x1440.webp");
 			--image-color: #000 !important;
 		}
 		if backgroundImage == "roppongi" {
-			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybr-stylus/refs/heads/main/roppongi-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybr-stylus/roppongi-2560x1440.webp");
+			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybrpapers/refs/heads/main/web/roppongi-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybrpapers/roppongi-2560x1440.webp");
 			--image-color: #000 !important;
 		}
 		if backgroundImage == "shibuya" {
-			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybr-stylus/refs/heads/main/shibuya-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybr-stylus/shibuya-2560x1440.webp");
+			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybrpapers/refs/heads/main/web/shibuya-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybrpapers/shibuya-2560x1440.webp");
 			--image-color: #000 !important;
 		}
 		if backgroundImage == "taito" {
-			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybr-stylus/refs/heads/main/taito-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybr-stylus/taito-2560x1440.webp");
+			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybrpapers/refs/heads/main/web/taito-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybrpapers/taito-2560x1440.webp");
 			--image-color: #000 !important;
 		}
 		if backgroundImage == "yoyogi" {
-			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybr-stylus/refs/heads/main/yoyogi-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybr-stylus/yoyogi-2560x1440.webp");
+			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybrpapers/refs/heads/main/web/yoyogi-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybrpapers/yoyogi-2560x1440.webp");
 			--image-color: #000 !important;
 		}
 		if backgroundImage == "asakusa" {
-			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybr-stylus/refs/heads/main/asakusa-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybr-stylus/asakusa-2560x1440.webp");
+			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybrpapers/refs/heads/main/web/asakusa-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybrpapers/asakusa-2560x1440.webp");
 			--image-color: #000 !important;
 		}
 		if backgroundImage == "akihabara" {
-			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybr-stylus/refs/heads/main/akihabara-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybr-stylus/akihabara-2560x1440.webp");
+			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybrpapers/refs/heads/main/web/akihabara-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybrpapers/akihabara-2560x1440.webp");
 			--image-color: #000 !important;
 		}
 		if backgroundImage == "harajuku" {
-			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybr-stylus/refs/heads/main/harajuku-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybr-stylus/harajuku-2560x1440.webp");
+			--image-bg: url(https://raw.githubusercontent.com/cybrcore/cybrpapers/refs/heads/main/web/harajuku-2560x1440.webp), url("https://cdn.jsdelivr.net/gh/cybrcore/cybrpapers/harajuku-2560x1440.webp");
 			--image-color: #000 !important;
 		}
 		if backgroundImage == "transparent" {
@@ -2072,5 +2072,26 @@ if sidebarLayout == "1" {
 	}
 	span[style*="background:#000"] {
 		background-color: transparent !important;
+	}
+}
+
+/* === GLOBE === */
+.globe-globe {
+	font-family: var(--theme-font-mono) !important;
+	
+	.globe-container {
+		background-color: transparent !important;
+
+		canvas[data-engine^="three.js"] {
+		  filter: drop-shadow(0 0 20px var(--p0)) !important;
+		}
+
+		a.globe-label {
+			background-color: var(--p0) !imporant;
+			font-family: var(--theme-font-mono) !important;
+		}
+	}
+	canvas {
+		font-family: var(--theme-font-mono) !important;
 	}
 }
