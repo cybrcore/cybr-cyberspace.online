@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           CYBRCORE
 @namespace      github.com/cybrcore/cybr-cyberspace.online/theme.css
-@version        3.1.1
+@version        3.2.0
 @description    Theme for Cyberspace.online
 @author         scherrer-txt
 @preprocessor   stylus
@@ -376,7 +376,6 @@
 }
 
 /* === LOGO === */
-
 :is(.feed-feed, .discussions-discussions, .interests-interests,
 .forums-forums, .following-following, .friends-friends, .watched-watched)
 .mb-4.mb-4 > .flex.items-center.gap-2 {
@@ -386,7 +385,7 @@
 	
 	/* Shows "CYBRCORE" */
 	span.text-lg::after {
-		content: "CYBRCORE BETA";
+		content: "CYBRCORE";
 		font-size: .75rem;
 		font-weight: bold;
 		visibility: visible;
@@ -427,6 +426,12 @@
  		.flex.items-center.gap-2.text-sm.no-underline::after {
 			content: "" !important;
 		}
+	}
+}
+
+@media (max-width: 640px) {
+	span.text-lg::after {
+		display: none;
 	}
 }
 
@@ -561,12 +566,7 @@
 	}
 	
 
-/* === SIDEBAR === */
-/* Sidebar border */
-    .sidebar .flex-1 .px-4 {
-        border-left: none !important;
-    }
-	
+/* === SIDEBAR TOGGLE === */
 	.sidebar {
 		opacity: calc(0 + (1 * var(--sidebar-visibility))) !important;
 		padding-bottom: 30px;
@@ -611,74 +611,125 @@ if sidebarLayout == "1" {
 	}
 }
 
-/* Sidebar icons */
-    .sidebar .py-3 {
+/* === SIDEBAR === */
+    .sidebar {
         color: var(--p0) !important;
         border: none !important;
-        background-color: transparent;
+        background-color: var(--tr1) !important;
         opacity: 1;
-
+		
+		a, button {
+			color: var(--s0) !important;
+			background-color: var(--tr0) !important;
+			border: none !important;
+			clip-path: var(--path-notchM) !important;
+			
 			&:focus, &:focus-visible, &:active {
 				color: var(--s0) !important;
 				background-color: var(--s2) !important;
 			}
 
 			&:hover {
-				color: var(--p0) !important;
-				background-color: var(--p2) !important;
+				color: var(--hv0) !important;
+				background-color: var(--hv2) !important;
+				
+				.text-xs, .top-1.right-1 {
+					color: var(--hv2) !important;
+					background-color: var(--hv0) !important;
+				}
 			}
+			
+			.text-xs, .top-1.right-1 {
+				background-color: var(--s0) !important;
+				color: var(--no0) !important;
+			}
+		}
+		button:not(.sidebar-toggle) {
+			height: 4vh !important;
+		}
+		a[href="/changelog"] {
+			color: var(--t0) !important;
+			opacity: 1 !important;
+			&:hover {
+				color: var(--hv0) !important;
+				background-color: transparent !important;	
+			}
+		}
+		button.sidebar-toggle, .sidebar-header {
+			display: none;
+		}
     }
-    .sidebar a.border {
-        background-color: transparent !important;
-    }
-    .sidebar a, .sidebar button {
-        background-color: transparent !important;
-    }
-	/* Sidebar notification icon */
-	.sidebar a .text-bg {
-			color: var(--p0) !important;
-			background-color: var(--p2) !important;
-			border: none !important;
+
+/* === MOBILE TOPBAR === */
+.mb-4 .grid.grid-cols-3.gap-px.bg-border.border.border-border {
+		background-color: var(--tr1) !important;
+		border: none !important;
+		border-radius: 0px !important;
+		clip-path: var(--path-notchM);
+		
+		a, button {
+			color: var(--s0);
+			
+			&:hover {
+				color: var(--hv0) !important;
+				background-color: var(--hv2) !important;
+				clip-path: var(--path-notchS);
+			}
+			&:active {
+				color: var(--bl0) !important;
+			}
+		}
+		.router-link-active {
+			background-color: var(--s2) !important;
+			clip-path: var(--path-notchS);
+		}
 	}
-    
-    .sidebar-footer button {
-        color: var(--p0) !important;
-        border: none !important;
-        opacity: 1;
 
-			&.py-2 .iconify {
-				width: 1.25rem !important;
-				height: 1.25rem !important;
+/* === MOBILE BOTTOM BAV === */
+.mobile-bottom-nav {
+	background: transparent !important;
+	border: none !important;
+	
+	.toggle-row {
+		background-color: color-mix(
+			var(--p0),
+			transparent 80%) !important;
+		backdrop-filter: blur(10px) !important;
+		width: 30vw !important;
+		clip-path: var(--path-notchM);
+		
+		a, button {
+			background-color: transparent !important;
+			color: var(--p0) !important;
+		}
+	}
+	.nav-row {
+		background-color: color-mix(
+			var(--s0),
+			transparent 85%) !important;
+		backdrop-filter: blur(10px) !important;
+		width: 100vw !important;
+		overflow: visible !important;
+		border: 0 !important;
+		color: var(--cy0) !important;
+		
+		a, button {
+			background-color: transparent !important;
+			color: var(--s0) !important;
+			
+			.top-1.right-1 {
+				background-color: var(--s0) !important;
 			}
-			&:focus {
-				color: var(--s0) !important;
-				background-color: var(--s2) !important;
-			}
-
-			&:hover {
-				color: var(--no0) !important;
-				background-color: var(--p0) !important;
-			}
-    }
-    .sidebar-header button {
-        color: var(--p0) !important;
-        border: none !important;
-        opacity: 1;
-
-			&.iconify {
-				width: 1.25rem !important;
-				height: 1.25rem !important;
-			}
-			&:focus {
-				color: var(--s0) !important;
-				background-color: var(--s2) !important;
-			}
-
-			&:hover {
-				color: var(--no0) !important;
-				background-color: var(--p0) !important;
-			}
-    }
+		}
+		
+		.nav-scroll-container::after {
+			background: linear-gradient(to left, var(--s0), transparent);
+		}
+		.nav-scroll-container::before {
+			background: linear-gradient(to right, var(--s0), transparent);
+		}
+	}
+}
 
 /* === NOTIFICATION & SETTING SITE === */
     .terminal-box {
@@ -814,35 +865,30 @@ if sidebarLayout == "1" {
 }
 
 /* === EDITOR === */
-    .editor-wrapper {
-        background-color: var(--tr1) !important;
-        border: none;
-        clip-path: var(--path-notchM) !important;
-    }
-    .menu-bar .button-group {
-        background-color: var(--s2) !important;
-        border: none;
-        clip-path: var(--path-notchM) !important;
+.editor-wrapper {
+	background-color: var(--tr1) !important;
+	border: none;
+	clip-path: var(--path-notchM) !important;
+}
+.menu-bar .button-group,
+.flex.items-center.border.border-fg {
+	border: none;
+	border-radius: 0px !important;
+	clip-path: var(--path-notchM) !important;
+	gap: 8px;
+	
+	button {
+		color: var(--s0) !important;
 		
-		button {
-			color: var(--s0) !important;
-			
-			&[class="is-active"] {
-				color: var(--t0) !important;
-				background-color: var(--t2) !important;
-			}
+		&[class="is-active"] {
+			color: var(--t0) !important;
+			background-color: var(--t2) !important;
 		}
-    }
-    .editor button {
-        background-color: var(--tr0) !important;
-        &:hover {
-            color: var(--hv0) !important;
-        }
-    }
-	/* NEW - SAVE - PUBLISH BUTTONS */
-	.flex.justify-between.flex-col-reverse.mb-16 .flex.flex-col.gap-4 {
-		gap: 8px !important;
+		&:hover {
+			color: var(--hv0) !important;
+		}
 	}
+}
 
 /* === CHAT LIST === */
 .chat-index {
@@ -1266,43 +1312,29 @@ if sidebarLayout == "1" {
 				background-color: var(--hv2) !important;
 			}
 		}
-		/* SUPPORTER ICON */
-		.inline-block a.no-underline .iconify {
-			color: var(--s0);
-		}
 		/* POST INFO */
 		.flex.items-center.space-x-2 .text-fg-dim {
 			color: var(--wh0);
 		}
 		/* TOPICS */
-		.mt-2 a {
+		.topics, .topics > * {
 			border: none !important;
-			color: var(--s0) !important;
-			background-color: var(--s2) !important;
-			clip-path: var(--path-notchS);
+			border-radius: 0px !important;
+			gap: 8px !important;
 			
-			&:hover {
-                color: var(--hv0) !important;
-				background-color: var(--hv2) !important;
-			}
-		}
-    }
-	/* POST GUILD ICON */
-	.terminal-box.py-3.px-3.transition-all.duration-200.overflow-hidden {
-		.guild-badge {
-			height: fit-content;
-			width: fit-content;
-			margin-top: -1px !important;
-			.iconify {
-				color: var(--t0);
-				height: 16px !important;
-				width: 16px !important;
+			.inline-flex {
+				color: var(--s0) !important;
+				background-color: var(--s2) !important;
+				clip-path: var(--path-notchS);
+				
 				&:hover {
-					color: var(--hv0);
+					color: var(--hv0) !important;
+					background-color: var(--hv2) !important;
 				}
 			}
 		}
-	}
+    }
+	
 	/* POST CONTENT */
     .markdown-content {
         /* CODE */
@@ -1384,6 +1416,15 @@ if sidebarLayout == "1" {
 		visibility: visible;
 		inset: 2px;
 		transition: opacity 0s 0s;
+	}
+		
+	/* REPLY */
+	.mb-6 .terminal-box.p-4 {
+		.inline-flex.border.border-fg {
+			border: 0 !important;
+			gap: 8px;
+			border-radius: 0px !important;
+		}
 	}
 	
 /* === PROFILE === */
@@ -1647,16 +1688,29 @@ if sidebarLayout == "1" {
 	.inline-block > button.no-underline.cursor-pointer {
 		background-color: transparent !important;
 		clip-path: none;
-		
 	}
-    /* HACKERS */
-	.iconify[class~="i-lucide:globe-lock"] {
-		color: var(--lk0) !important;
-	}
-    /* KHAN */
+	/* KHAN */
 	.ml-0 {
 		color: var(--t0) !important;
 	}
+    /* HACKERS */
+	.iconify[class~="i-lucide:globe-lock"] {
+		color: var(--s0) !important;
+	}
+	/* SUPPORTER */
+	a.inline-flex[href="/support"] .iconify {
+		color: var(--p0) !important;
+	}
+	/* POST GUILD ICON */
+	.guild-badge .iconify {
+		margin-top: -1px !important;
+		color: var(--t0) !important;
+		height: 16px !important;
+		width: 16px !important;
+			&:hover {
+				color: var(--hv0);
+			}
+		}
 
 /* === TOPICS === */
 	.topics-topics {
@@ -1897,7 +1951,7 @@ if sidebarLayout == "1" {
 		background-color: var(--s0) !important;
 		border: none;
 	}
-	
+
 /* === NOTIFICATION === */
 	.fixed > .bg-bg:not(.version-toast) {
 		background-color: var(--p0) !important;
