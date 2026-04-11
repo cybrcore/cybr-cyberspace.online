@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/cybrcore/cybrcore/refs/heads/main/assets/repo-banners/cybr-cyberspace-banner.png" height=200px/>
+<img src="https://raw.githubusercontent.com/cybrcore/cybrcore/refs/heads/main/assets/repo-banners/cybr-cyberspace-banner-top.png"/>
 
 # Options
 - Change colors (primary, secondary, tertiary, link, hover)
