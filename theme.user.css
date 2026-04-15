@@ -2193,6 +2193,10 @@ if sidebarLayout == "1" {
 	.image-raster {
 	 	mix-blend-mode: lighten !important;
 	}
+	/* FORTUNE DESC */
+	.text-bg.text-sm {
+		color: var(--no0) !important;
+	}
 }
 .fortune-tarot-fortune {
 	/* READ DESCRIPTION */
