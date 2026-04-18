@@ -756,6 +756,10 @@ if sidebarLayout == "1" {
 .notification-item {
 	background-color: var(--no1) !important;
 
+	span {
+		color: var(--no0) !important;
+	}
+
 		&:hover {
 			background-color: var(--hv2) !important;
 			
