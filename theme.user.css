@@ -2237,3 +2237,25 @@ if sidebarLayout == "1" {
 		color: var(--t0) !important;
 	}
 }
+
+/* === BOOT SCREEN === */
+.boot-root {
+	position: fixed;
+	inset: 0;
+	background: var(--image-bg) !important;
+	background-color: var(--image-color) !important;
+	background-size: cover;
+	background-position: center;
+	pointer-events: none;
+	
+	pre {
+		background: none !important;
+	}
+	span {
+		color: var(--p0) !important;
+		
+		.dim {
+			color: var(--s0) !important;
+		}
+	}
+}
