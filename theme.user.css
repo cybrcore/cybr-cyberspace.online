@@ -485,6 +485,11 @@
 		color: var(--t0) !important;
 	}
 
+/* === CORNER RADIUS OVERRIDE === */
+* {
+	border-radius: 0px !important;
+}
+
 /* === ROUTER MENU === */
 .mb-6 > * {
 	border-radius: 0 !important;
