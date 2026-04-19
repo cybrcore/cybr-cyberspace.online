@@ -2160,18 +2160,20 @@ if sidebarLayout == "1" {
 		background-color: transparent !important;
 
 		canvas[data-engine^="three.js"] {
-		  filter: drop-shadow(0 0 20px var(--p0)) !important;
+		  /*filter:  !important;*/
 		}
 
 		a.globe-label {
 			background-color: var(--p0) !imporant;
 			font-family: var(--theme-font-mono) !important;
+			clip-path: var(--path-notchS) !important;
 		}
 	}
 	canvas {
-		font-family: var(--theme-font-mono) !important;
+    	filter: hue-rotate(0deg) saturate(100) brightness(1) drop-shadow(0 0 20px color-mix(var(--s0), transparent 5%)) !important;
 	}
 }
+
 
 /* === FORTUNE === */
 .fortune-fortune {
