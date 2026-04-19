@@ -40,3 +40,8 @@
     1. Click on the Stylus icon in your browser toolbar  
     2. Click on the cogwheel next to the name of the theme  
     3. Pick your preferred options from dropdowns
+
+
+  <a href="https://github.com/cybrcore/cybrcore">
+    <img alt="cybrcore" src="https://raw.githubusercontent.com/cybrcore/cybrcore/refs/heads/main/assets/repo-banners/cybrcore-footer.png">
+  </a>
