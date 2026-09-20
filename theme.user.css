@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           CYBRCORE
 @namespace      github.com/cybrcore/cybr-cyberspace.online/theme.css
-@version        3.2.0
+@version        3.0.3
 @description    Theme for Cyberspace.online
 @author         scherrer-txt
 @preprocessor   stylus
@@ -437,7 +437,7 @@
 }
 
 /* === TRANSPARENCY === */
-    body, .bg-bg, .sidebar, .tiptap-wrapper, html {
+    body, .bg-bg, .sidebar, [id="__nuxt"], .tiptap-wrapper, html {
         background-color: var(--tr0) !important;
         scrollbar-color: var(--p0) transparent;
         scrollbar-width: thin;
@@ -486,10 +486,11 @@
 	}
 
 /* === CORNER RADIUS OVERRIDE === */
+
 * {
 	border-radius: 0px !important;
 }
-
+	
 /* === ROUTER MENU === */
 .mb-6 > * {
 	border-radius: 0 !important;
@@ -761,10 +762,6 @@ if sidebarLayout == "1" {
 .notification-item {
 	background-color: var(--no1) !important;
 
-	span {
-		color: var(--no0) !important;
-	}
-
 		&:hover {
 			background-color: var(--hv2) !important;
 			
@@ -820,6 +817,10 @@ if sidebarLayout == "1" {
 					color: var(--t0) !important;
 				}
 			}
+			
+			span {
+				color: var(--no0) !important;
+			}
 			a.font-bold:hover {
 				background-color: var(--t0) !important;
 				color: var(--no0) !important;
@@ -835,13 +836,6 @@ if sidebarLayout == "1" {
 			}
 		}
 	
-/* === MODAL === */
-    .modal-content,
-	.modal-content .terminal-box {
-        clip-path: none !important;
-        border: none !important;
-    }
-
 /* === ATTACHMENTS === */
 .attachment-input {
 	.modal-overlay {
@@ -886,6 +880,7 @@ if sidebarLayout == "1" {
 		border-radius: 0px !important;
         clip-path: var(--path-notchM) !important;
 		gap: 8px;
+		overflow: visible !important;
 		
 		button {
 			color: var(--s0) !important;
@@ -899,6 +894,86 @@ if sidebarLayout == "1" {
 			}
 		}
     }
+	
+	.guilds-slug-forum-new-guilds form .flex .inline-flex {
+		
+		 a, button {
+			color: var(--s0) !important;
+			border: none !important;
+			
+			&:hover {
+				color: var(--hv0) !important;
+			}
+		}
+		
+		.px-3.py-1 {
+			color: var(--s0) !important;
+			background-color: var(--s2) !important;
+			clip-path: var(--path-notchS) !important;
+			
+			&:hover {
+				color: var(--hv0) !important;
+				background-color: var(--hv2) !important;
+			}
+		}
+	}
+
+/* === MODAL === */
+	.modal-content,
+	.modal-content .terminal-box {
+		clip-path: none !important;
+		border: none !important;
+	}
+
+	.modal-overlay.fixed {
+		clip-path: none !important;
+		overflow: visible !important;
+		z-index: 1000 !important;
+	}
+
+	.dos-shadow {
+		display: none !important;
+	}
+
+	.dos-frame {
+		border: none !important;
+		box-shadow: none !important;
+		background-color: var(--no0) !important;
+		clip-path: var(--path-notchM) !important;
+
+		/* MODAL INPUT FIELD */
+		.mb-4 input[type="text"],
+		.mb-4 input[type="url"] {
+			background-color: var(--no2) !important;
+			color: var(--s0) !important;
+		}
+
+		.inline-flex {
+			border: none !important;
+			border-radius: 0px !important;
+			gap: 8px !important;
+
+			button {
+				color: var(--s0) !important;
+				&:hover {
+					color: var(--hv0) !important;
+					background-color: var(--hv2) !important;
+				}
+			}
+		}
+	}
+
+	.button-group:has(> .modal-overlay) {
+		clip-path: none !important;
+	}
+	
+	.modal-overlay {
+		background-color: color-mix(
+			var(--p0),
+			transparent 80%) !important;
+		backdrop-filter: blur(10px) !important;
+		z-index: 1000 !important;
+	}
 
 /* === CHAT LIST === */
 .chat-index {
@@ -1188,6 +1263,11 @@ if sidebarLayout == "1" {
 		&:hover {
 			color: var(--hv0) !important;
 		}
+	}
+	
+	code {
+		color: var(--t0) !important;
+		background-color: var(--t2) !important;
 	}
 	
     /* TIMESTAMP */
@@ -1497,12 +1577,13 @@ if sidebarLayout == "1" {
 			}
 		}
 		/* GUILDS */
-		.flex.items-center.gap-1.mt-1 {
-			background-color: var(--s2);
+		.flex.items-center.gap-x-1.mt-1 {
+			background-color: var(--s2) !important;
 			width: fit-content;
 			clip-path: var(--path-notchM);
-			padding: 2px 5px;
-			gap: 0;
+			padding: 4px 8px;
+			row-gap: 4px;
+			column-gap: 12px;
 			
 			/* GUILD ICONS */
 			.guild-badge {
@@ -1513,10 +1594,17 @@ if sidebarLayout == "1" {
 					color: var(--s0) !important;
 				}
 			}
-			/* GUILD NAME */
+			/* GUILD NAMES */
 			a.no-underline.text-fg {
 				color: var(--s0) !important;
 				background-color: transparent !important;
+			}
+			a.text-fg:not(:focus):not(:focus-visible) {
+				color: var(--s0) !important;
+				
+				&:hover {
+					color: var(--hv0) !important;
+				}
 			}
 		}
 		/* TITLES */
@@ -1542,7 +1630,7 @@ if sidebarLayout == "1" {
     }
 
 /* === GUILDS === */
-.guilds-slug-guilds, .guilds-slug-members-guilds, .guilds-slug-forum-guilds {
+.guilds-slug-guilds, .guilds-slug-members-guilds, .guilds-slug-forum-guilds, .guilds-slug-forum-new-quilds {
 	
 	.guild-nav {
 		gap: 16px;
@@ -1624,6 +1712,7 @@ if sidebarLayout == "1" {
 			}
 		}
 	}
+	
 	.mt-6 .p-4.block.no-underline {
 			background-color: var(--no1) !important;
 			.iconify.text-fg, .text-fg {
@@ -1703,6 +1792,11 @@ if sidebarLayout == "1" {
 		}
 	}
 }
+
+.flex.flex-col.gap-1 .flex.items-center.gap-2 .iconify {
+	color: var(--s0) !important;
+}
+
 .guilds-slug-guilds .terminal-box.divide-y.divide-border {
 		background-color: transparent !important;
 	}
@@ -2145,7 +2239,7 @@ if sidebarLayout == "1" {
 		color: var(--ye0) !important;
 	}
 	span[style*="color:#6a4"] {
-		color: var(--gr0) !important;
+		color: var(--gr0) !importan5t;
 	}
 	span[style*="background:#000"] {
 		background-color: transparent !important;
@@ -2173,7 +2267,6 @@ if sidebarLayout == "1" {
     	filter: hue-rotate(0deg) saturate(100) brightness(1) drop-shadow(0 0 20px color-mix(var(--s0), transparent 5%)) !important;
 	}
 }
-
 
 /* === FORTUNE === */
 .fortune-fortune {
